@@ -11,6 +11,14 @@ object Core extends js.Object {
   def initialize() = sys.error("stub")
 }
 
+@JSName("enchant.Key")
+class Key extends js.Object {
+  var up: Boolean = ???
+  var down: Boolean = ???
+  var left: Boolean = ???
+  var right: Boolean = ???
+}
+
 @JSName("enchant.Core")
 class Core(_width: Int, _height: Int) extends EventTarget() {
   var assets: js.Object = ???
@@ -18,7 +26,7 @@ class Core(_width: Int, _height: Int) extends EventTarget() {
   var fps: Int = ???
   var frame: Int = ???
   var height: Int = ???
-  var input: js.Object = ???
+  var input: Key = ???
   var instance: Core = ???
   var loadingScene: Scene = ???
   var ready: Boolean = ???
